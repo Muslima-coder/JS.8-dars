@@ -509,6 +509,6 @@
 
 
 //100 ballga
-// Function Declaration - bu eng oddiy va ko'p ishlatiladigan function yaratish usulidir. Bu usulda function nomi aniq ko'rsatilgan bo'lib, uni keyincha chaqirish mumkin. Funksiya definitiondan keyin chaqirilishi mumkin.
+// Function Declaration -  bu eng oddiy va ko'p ishlatiladigan function yaratish usulidir. Bu usulda function nomi aniq ko'rsatilgan bo'lib, uni keyincha chaqirish mumkin. Funksiya definitiondan keyin chaqirilishi mumkin.
 //Function Expression – bu function o‘zgaruvchiga tayinlanadi va functionni bir o‘zgaruvchi sifatida ishlatish imkonini beradi. Bu usulda function yozilgan joyda darhol chaqirilmaydi.
 //Arrow Function – bu ES6 bilan joriy qilingan va ancha qisqaroq yozilishi bilan ajralib turadigan function turidir. Arrow functionda function kalit so‘zi o‘rniga => operatori ishlatiladi. Bu turdagi funksiyalar, ayniqsa, qisqa va o‘zgarmas funksiya yaratishda foydalidir.
