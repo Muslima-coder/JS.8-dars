@@ -512,3 +512,78 @@
 // Function Declaration -  bu eng oddiy va ko'p ishlatiladigan function yaratish usulidir. Bu usulda function nomi aniq ko'rsatilgan bo'lib, uni keyincha chaqirish mumkin. Funksiya definitiondan keyin chaqirilishi mumkin.
 //Function Expression – bu function o‘zgaruvchiga tayinlanadi va functionni bir o‘zgaruvchi sifatida ishlatish imkonini beradi. Bu usulda function yozilgan joyda darhol chaqirilmaydi.
 //Arrow Function – bu ES6 bilan joriy qilingan va ancha qisqaroq yozilishi bilan ajralib turadigan function turidir. Arrow functionda function kalit so‘zi o‘rniga => operatori ishlatiladi. Bu turdagi funksiyalar, ayniqsa, qisqa va o‘zgarmas funksiya yaratishda foydalidir.
+// Immediately Invoked Function Expression (IIFE)
+// Yaratilgandan so‘ng darhol bajariladigan funksiya. Odatda, qo‘llanilishdan keyin global o‘zgaruvchilardan qochish va xususiy (private) scope yaratish uchun ishlatiladi.
+// Constructor Function
+// Obyekt yaratish uchun ishlatiladigan maxsus funksiya. new operatori bilan chaqiriladi va this orqali yangi obyektga xususiyatlar beriladi.
+// Factory Function
+// Yangi obyektlarni yaratish uchun oddiy funksiya (constructor functionsiz). Odatda, obyektni qaytaradi va new ga ehtiyoj yo‘q.
+// Recursive Function
+// O‘zini o‘zi chaqiradigan funksiya. Odatda, takrorlanuvchi (iterativ) masalalar uchun ishlatiladi.
+
+//Function Declaration
+//Ikki sonni qo‘shadigan funksiya yoz. Funksiya nomi qoshish bo‘lsin, ikkita parametr olsin va ularning yig‘indisini qaytarsin.
+// function Qoshish (a, b){
+//     return a + b
+// }
+// console.log(Qoshish( 5, 8))
+
+//Function Expression
+// Ikki sonni ko‘paytiradigan funksiya yoz. Funksiya nomi kopaytirish bo‘lsin, ikkita parametr olsin va ularning ko‘paytmasini qaytarsin. Bu safar function expressiondan foydalan.
+// const kopaytirish = function(a, b) {
+//     return a * b;
+// }
+// console.log(kopaytirish(4, 6));
+
+//Arrow function
+// Ikki sonni ko‘paytiradigan funksiya yoz. Funksiya nomi kopaytirish bo‘lsin, ikkita parametr olsin va ularning ko‘paytmasini qaytarsin. Bu safar function expressiondan foydalan.
+// const kopaytirish = (a, b) => {
+//     return a * b;
+// }
+// console.log(kopaytirish(44, 68));
+
+
+// Immediately Invoked Function Expression (IIFE)
+// Ikki sonni ko‘paytiradigan funksiya yoz. Funksiya nomi kopaytirish bo‘lsin, ikkita parametr olsin va ularning ko‘paytmasini qaytarsin. Bu safar function expressiondan foydalan.
+// (function(a, b) {
+//     console.log(a * b);
+// })(5, 10);
+
+
+// Constructor Function
+// Ikki sonni  bo'ladigan funksiya yoz. Funksiya nomi kopaytirish bo‘lsin, ikkita parametr olsin va ularning bo'linmasini qaytarsin. Bu safar function expressiondan foydalan.
+// const bolish = function(a, b) {
+//     return a / b;
+// }
+// console.log(bolish(200, 8));
+
+//Factory Function
+// Factory Function misoli
+// function foydalanuvchiYarat(ism, yosh) {
+//     return {
+//         ism: ism,
+//         yosh: yosh,
+//         salomBer: function() {
+//             console.log(`Salom, mening ismim ${ism} va yoshim ${yosh} da.`);
+//         }
+//     };
+// }
+// const user1 = foydalanuvchiYarat("Laylo", 15);
+// const user2 = foydalanuvchiYarat("Ali", 16);
+// user1.salomBer();
+// user2.salomBer();
+
+//Recursive Function
+// Recursive function + Array methodlari (flatMap, reduce)
+// function yigindi(arr) {
+//     return arr.reduce((sum, current) => {
+//         if (Array.isArray(current)) {
+//             return sum + yigindi(current);
+//         } else {
+//             return sum + current;
+//         }
+//     }, 0);
+// }
+// const numbers = [1, [2, 3], [4, [5, 6]], 7];
+// const natija = yigindi(numbers);
+// console.log(natija); 
